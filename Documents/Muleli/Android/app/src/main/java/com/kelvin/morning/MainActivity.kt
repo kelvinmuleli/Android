@@ -63,7 +63,7 @@ fun Morning() {
 
 
 
-       
+
 
    ) {
        Row(
@@ -184,10 +184,10 @@ fun Morning() {
 
 
 
-           val picha = LocalContext.current
+           val just = LocalContext.current
            Button(onClick = {
 
-              picha.startActivity(Intent(picha, ImageActivity::class.java))
+              just.startActivity(Intent(just, JustActivity::class.java))
 
            },
 //
@@ -246,7 +246,15 @@ fun Morning() {
            }
 )
    }
+    Spacer(modifier = Modifier.height(15.dp))
 
+        val hh = LocalContext.current
+        Text(text = "Click to Cards",
+            modifier = Modifier
+                .clickable {
+                    hh.startActivity(Intent(hh, CardActivity::class.java))
+                }
+        )
 
 
    }

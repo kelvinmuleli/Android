@@ -48,6 +48,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kelvin.morning.ui.theme.MorningTheme
+import com.kelvin.muleli.ImageActivity
 
 class InputActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,7 +71,7 @@ fun Input() {
         Image(painter = painterResource(id =R.drawable.myhouse ),
             contentDescription ="win" ,
 
-            contentScale = ContentScale.Fit
+            contentScale = ContentScale.Crop
 
 
             )
@@ -131,14 +132,17 @@ fun Input() {
                 textStyle = TextStyle(Color.Red),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     focusedBorderColor = Color.Blue,
-                    unfocusedBorderColor = Color.Green,
+                    unfocusedBorderColor = Color.Red,
                     focusedLabelColor = Color.Red,
                     unfocusedLabelColor = Color.Green,
                     cursorColor = Color.Blue,
                     unfocusedLeadingIconColor = Color.Blue,
                     focusedLeadingIconColor = Color.Green,
-                    focusedTextColor = Color.White,
-                    unfocusedTextColor = Color.Red
+                    focusedTextColor = Color.Magenta,
+                    unfocusedTextColor = Color.Red,
+                    focusedTrailingIconColor = Color.Yellow,
+                    unfocusedTrailingIconColor = Color.Black
+
 
 
 
@@ -161,7 +165,27 @@ fun Input() {
             Spacer(modifier = Modifier.height(30.dp))
 
 
+            val image = LocalContext.current
+            Button(onClick = {
+                image.startActivity(Intent(image, ImageActivity::class.java))
 
+            },
+//           colors = ButtonDefaults.buttonColors( Color.Red),
+//           shape = REctangleShape
+//           shape = RoundedCornerShape(10.dp)
+                shape = CutCornerShape(20),
+                border = BorderStroke(1.dp, Color.Blue),
+
+                colors = ButtonDefaults.outlinedButtonColors(Color.Red),
+
+
+
+                ) {
+                Text(
+                    text = "image Screen",
+                    color = Color.Yellow
+                )
+            }
 
 
 

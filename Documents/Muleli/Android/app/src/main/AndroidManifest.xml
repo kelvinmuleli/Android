@@ -13,6 +13,26 @@
         android:theme="@style/Theme.Morning"
         tools:targetApi="31">
         <activity
+            android:name=".JustActivity"
+            android:exported="false"
+            android:label="@string/title_activity_just"
+            android:theme="@style/Theme.Morning" />
+        <activity
+            android:name=".AssignmentActivity"
+            android:exported="false"
+            android:label="@string/title_activity_assignment"
+            android:theme="@style/Theme.Morning" />
+        <activity
+            android:name=".GridActivity"
+            android:exported="false"
+            android:label="@string/title_activity_grid"
+            android:theme="@style/Theme.Morning" />
+        <activity
+            android:name=".CardActivity"
+            android:exported="false"
+            android:label="@string/title_activity_card"
+            android:theme="@style/Theme.Morning" />
+        <activity
             android:name=".ScrollActivity"
             android:exported="false"
             android:label="@string/title_activity_scroll"

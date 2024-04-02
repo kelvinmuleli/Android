@@ -42,7 +42,7 @@ fun Lazy() {
         Column {
             Text(text = "Almost Easter")
 
-            Spacer(modifier = Modifier.height(400.dp))
+            Spacer(modifier = Modifier.height(900.dp))
 
 
             Text(text = "Winners never quit")
